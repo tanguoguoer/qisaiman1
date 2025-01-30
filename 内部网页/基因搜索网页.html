@@ -1,0 +1,736 @@
+<body>
+    <div>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="description" content="七鳃鳗数据网站"/>
+      <meta name="keywords" content="七鳃鳗数据网页"/>
+      <meta name="author" content="Lapus"/>
+      <title>七鳃鳗数据网站基因搜索网页
+      </title><head>
+        <link rel="stylesheet" href="../css/111.css" />  
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            .search-container {
+                margin-bottom: 20px;
+            }
+            .search-box {
+                margin-right: 10px;
+                padding: 5px;
+                width: 300px;
+            }
+            .example {
+                color: #007bff;
+                cursor: pointer;
+            }
+            .example:hover {
+                text-decoration: underline;
+            }
+            .reset-button {
+                margin-left: 10px;
+            }
+            .result-container {
+                display: none; /* 初始时隐藏结果容器 */
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 10px;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            .pagination {
+                margin-top: 20px;
+                text-align: center;
+            }
+            .pagination select {
+                margin-right: 10px;
+            }
+            .pagination button {
+                margin: 0 5px;
+                padding: 5px 10px;
+            }
+        </style>
+    
+      </head>
+      
+      <link rel="preload" href="https://baike.baidu.com/item/%E4%B8%83%E9%B3%83%E9%B3%97/652208" as="font" type="font/woff2" crossorigin=""/>
+      <link rel="shortcut icon" href="https://baike.baidu.com/item/%E4%B8%83%E9%B3%83%E9%B3%97/652208"/>
+      <link rel="stylesheet" href="https://baike.baidu.com/item/%E4%B8%83%E9%B3%83%E9%B3%97/652208"/>
+      <link rel="stylesheet" href="../css/aaa.css"/>
+      <nav id="sticky-navbar" class="navbar navbar-expand-lg classic transparent navbar-light navbar-clone fixed">
+        <div class="container flex-lg-row flex-nowrap align-items-center">
+          <div class="navbar-brand w-100">
+            <a href="https://baike.baidu.com/item/%E4%B8%83%E9%B3%83%E9%B3%97/652208"><img src="https://pic.616pic.com/ys_img/01/00/88/iaKdNWP5fW.jpg" alt="" width="81" height="54"/></a>
+          </div>
+          <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+          <div class="offcanvas-header d-lg-none">
+              <h3 class="text-white fs-30 mb-0">Petromyzontiformes
+              </h3>
+              <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="btn-close btn-close-white"></button>
+            </div>
+            <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a href="../1.html"  class="nav-link dropdown-toggle">主页</a>
+                  
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">分类学</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown dropdown-submenu dropend">
+                      <a href="../分类学网页1.html"  class="dropdown-item ">分组</a>
+                     
+                    </li>
+                    
+                    <li class="dropdown dropdown-submenu dropend">
+                      <a href="#"  class="dropdown-item ">#</a>
+                     
+                    </li>
+                    
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                      <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">基因组</a>
+                      <ul class="dropdown-menu">
+                        
+                        <li class="dropdown dropdown-submenu dropend">
+                          <a href="基因学特征网页.html"  class="dropdown-item ">基因学特征</a>
+                         
+                        </li>
+                       
+                        <li class="dropdown dropdown-submenu dropend">
+                          <a href="基因搜索网页.html"  class="dropdown-item ">基因搜索</a>
+                         
+                        </li>
+                        <li class="nav-item">
+                          <a href="基因注释网页.html" class="dropdown-item">基因注释</a>
+                        </li>
+                        
+                        <li class="dropdown dropdown-submenu dropend">
+                          <a href="转座因子网页.html"  class="dropdown-item ">转座因子</a>
+                         
+                        </li>
+                        
+                        <li class="dropdown dropdown-submenu dropend">
+                          <a href="基因家族网页.html"  class="dropdown-item ">基因家族</a>
+                         
+                        </li>
+                        
+                        <li class="dropdown dropdown-submenu dropend">
+                          <a href="有丝分裂数据.html"  class="dropdown-item ">有丝分裂数据</a>
+                         
+                        </li>
+                      </ul>
+                </li>
+                     <li class="nav-item dropdown">
+                      <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">转录组</a>
+                      <ul class="dropdown-menu">
+                        
+                        <li class="dropdown dropdown-submenu dropend">
+                          <a href="转录组数据网页.html"  class="dropdown-item ">转录组数据</a>
+                         
+                        </li>
+                        <li class="dropdown dropdown-submenu dropend">
+                          <a href="基因表达网页.html"  class="dropdown-item ">基因表达</a>
+                         
+                        </li>
+                        <li class="nav-item">
+                          <a href="基因网络网页.html" class="dropdown-item">基因网络</a>
+                        </li>
+                      </ul>
+                    </li>
+                     <li class="nav-item dropdown">
+                      <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">单细胞</a>
+                      <ul class="dropdown-menu">
+                        
+                        <li class="dropdown dropdown-submenu dropend">
+                          <a href="单细胞数据网页.html"  class="dropdown-item ">单细胞数据</a>
+                         
+                        </li>
+                        
+                        <li class="dropdown dropdown-submenu dropend">
+                          <a href="细胞图谱网页.html"  class="dropdown-item ">细胞图谱</a>
+                         
+                        </li>
+                        <li class="nav-item">
+                          <a href="./pricing.html" class="dropdown-item">细胞标记</a>
+                        </li>
+                         <li class="nav-item">
+                          <a href="./pricing.html" class="dropdown-item">单细胞基因表达</a>
+                        </li>
+                      </ul>
+                    </li>
+                     <li class="nav-item dropdown">
+                      <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">空间地图</a>
+                      <ul class="dropdown-menu">
+                        
+                        <li class="dropdown dropdown-submenu dropend">
+                          <a href="./分类学网页1.html"  class="dropdown-item ">空间转录组</a>
+                         
+                        </li>
+                       </ul>
+                </li>
+                        <li class="nav-item dropdown">
+                          <a href="#" data-bs-toggle="dropdown"class="nav-link dropdown-toggle">演化发生学</a>
+                          <ul class="dropdown-menu">
+                        
+                        <li class="dropdown dropdown-submenu dropend">
+                            <a href="./分类学网页1.html"  class="dropdown-item ">宏联线分析</a>
+                           
+                          </li>   
+                          
+                          <li class="dropdown dropdown-submenu dropend">
+                            <a href="./分类学网页1.html"  class="dropdown-item ">细胞类型进化</a>
+                           
+                          </li>
+                      </ul>
+                    </li>
+                     <li class="nav-item dropdown">
+                      <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">下载</a>
+                      <ul class="dropdown-menu">
+                        
+                        <li class="dropdown dropdown-submenu dropend">
+                          <a href="./分类学网页1.html"  class="dropdown-item ">基因组数据</a>
+                         
+                        </li>
+                        
+                        <li class="dropdown dropdown-submenu dropend">
+                          <a href="./分类学网页1.html"  class="dropdown-item ">转录组数据</a>
+                         
+                        </li>
+                        <li class="nav-item">
+                          <a href="./pricing.html" class="dropdown-item">单细胞数据</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">帮助</a>
+                      <ul class="dropdown-menu">
+                        
+                        <li class="dropdown dropdown-submenu dropend">
+                          <a href="./分类学网页1.html"  class="dropdown-item ">数据统计</a>
+                         
+                        </li>
+                       
+                        <li class="dropdown dropdown-submenu dropend">
+                          <a href="./分类学网页1.html"  class="dropdown-item ">数据</a>
+                         
+                        </li>
+                        <li class="nav-item">
+                          <a href="./pricing.html" class="dropdown-item">用户教程</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="./pricing.html" class="dropdown-item">常见问题</a>
+                        </li>
+                      </ul>
+                      
+                
+               
+                      <!-- /.column -->
+                   
+                    <!-- /auto-column -->
+                </li>
+                
+                </li>
+              </ul>
+              <!-- /.navbar-nav -->
+              
+                  <nav class="nav social social-white mt-4">
+                    <a href="#"><i class="uil uil-twitter">
+                      </i></a>
+                    <a href="#"><i class="uil uil-facebook-f">
+                      </i></a>
+                    <a href="#"><i class="uil uil-dribbble">
+                      </i></a>
+                    <a href="#"><i class="uil uil-instagram">
+                      </i></a>
+                    <a href="#"><i class="uil uil-youtube">
+                      </i></a>
+                  </nav>
+                  <!-- /.social -->
+            </div>
+          </div>
+              <!-- /.offcanvas-footer -->
+      </div>
+            <!-- /.offcanvas-body -->
+  </div>
+          <!-- /.navbar-collapse -->
+  
+          <!-- /.navbar-other -->
+        </div>
+        <!-- /.container -->
+      <div class="content-wrapper">
+        <header class="wrapper bg-soft-primary">
+          <nav class="navbar navbar-expand-lg center-nav transparent position-absolute navbar-dark">
+            <div class="container flex-lg-row flex-nowrap align-items-center">
+              <div class="navbar-brand w-100">
+                <a href="https://baike.baidu.com/item/%E4%B8%83%E9%B3%83%E9%B3%97/652208"><img src="https://pic.616pic.com/ys_img/01/00/88/iaKdNWP5fW.jpg" alt="" width="85" height="75" class="logo-dark"/></a>
+              </div>
+              <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+                <div class="offcanvas-header d-lg-none">
+                  <h3 class="text-white fs-30 mb-0">Petromyzontiformes 
+                  </h3>
+                  <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="btn-close btn-close-white">搜索</button>
+                </div>
+                <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+                  <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                      <a href="../index.html"  class="nav-link dropdown-toggle">主页</a>
+                      
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">分类学</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown dropdown-submenu dropend">
+                        <a href="./分类学网页1.html"  class="dropdown-item ">分组</a>
+                       
+                      </li>
+                      
+                      <li class="dropdown dropdown-submenu dropend">
+                        <a href="#"  class="dropdown-item ">#</a>
+                       
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="#"  class="nav-link ">基因组</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a href="基因学特征网页.html"  class="dropdown-item">基因学特征</a>
+                        
+                      </li>
+                      <li class="nav-item">
+                        <a href="基因搜索网页.html"  class="dropdown-item ">基因搜索</a>
+                        
+                      </li>
+                      <li class="nav-item">
+                        <a href="基因注释网页.html" class="dropdown-item">基因注释</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="转座因子网页.html" class="dropdown-item ">转座因子</a>
+                        
+                      </li>
+                      <li class="nav-item">
+                        <a href="基因家族网页.html" class="dropdown-item ">基因家族</a>
+                        
+                      </li>
+                      <li class="nav-item">
+                        <a href="有丝分裂数据.html"  class="dropdown-item ">有丝分裂数据</a>
+                        
+                      </li>
+                    </ul>
+                  </li>
+                   <li class="nav-item dropdown">
+                    <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">转录组</a>
+                    <ul class="dropdown-menu">
+                      
+                      <li class="dropdown dropdown-submenu dropend">
+                        <a href="转录组数据网页.html"  class="dropdown-item ">转录组数据</a>
+                       
+                      </li>
+                      
+                      <li class="dropdown dropdown-submenu dropend">
+                        <a href="基因表达网页.html"  class="dropdown-item ">基因表达</a>
+                       
+                      </li>
+                      <li class="nav-item">
+                        <a href="基因网络网页.html" class="dropdown-item">基因网络</a>
+                      </li>
+                    </ul>
+                  </li>
+                   <li class="nav-item dropdown">
+                    <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">单细胞</a>
+                    <ul class="dropdown-menu">
+                      
+                      <li class="dropdown dropdown-submenu dropend">
+                        <a href="单细胞数据网页.html"  class="dropdown-item ">单细胞数据</a>
+                       
+                      </li>
+                      
+                      <li class="dropdown dropdown-submenu dropend">
+                        <a href="细胞图谱网页.html"  class="dropdown-item ">细胞图谱</a>
+                       
+                      </li>
+                      <li class="nav-item">
+                        <a href="./pricing.html" class="dropdown-item">细胞标记</a>
+                      </li>
+                       <li class="nav-item">
+                        <a href="./pricing.html" class="dropdown-item">单细胞基因表达</a>
+                      </li>
+                    </ul>
+                  </li>
+                   <li class="nav-item dropdown">
+                    <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">空间地图</a>
+                    <ul class="dropdown-menu">
+                      
+                      <li class="dropdown dropdown-submenu dropend">
+                        <a href="./分类学网页1.html"  class="dropdown-item ">空间转录组</a>
+                       
+                      </li>
+                     </ul>
+                  </li>
+                      <li class="nav-item dropdown">
+                        <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">演化发生学</a>
+                        <ul class="dropdown-menu">
+                      
+                      <li class="dropdown dropdown-submenu dropend">
+                          <a href="./分类学网页1.html"  class="dropdown-item ">宏联线分析</a>
+                         
+                      </li>
+                        
+                        <li class="dropdown dropdown-submenu dropend">
+                          <a href="./分类学网页1.html"  class="dropdown-item ">细胞类型进化</a>
+                         
+                        </li>
+                    </ul>
+                  </li>
+                  
+                   <li class="nav-item dropdown">
+                    <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">下载</a>
+                    <ul class="dropdown-menu">
+                     
+                      <li class="dropdown dropdown-submenu dropend">
+                        <a href="./分类学网页1.html"  class="dropdown-item ">基因组数据</a>
+                       
+                      </li>
+                     
+                      <li class="dropdown dropdown-submenu dropend">
+                        <a href="./分类学网页1.html"  class="dropdown-item ">转录组数据</a>
+                       
+                      </li>
+                      <li class="nav-item">
+                        <a href="./pricing.html" class="dropdown-item">单细胞数据</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">帮助</a>
+                    <ul class="dropdown-menu">
+                     
+                      <li class="dropdown dropdown-submenu dropend">
+                        <a href="./分类学网页1.html"  class="dropdown-item ">数据统计</a>
+                       
+                      </li>
+                      <li class="dropdown dropdown-submenu dropend">
+                        <a href="./分类学网页1.html"  class="dropdown-item ">数据统计</a>
+                       
+                      </li>
+                      <li class="dropdown dropdown-submenu dropend">
+                        <a href="./分类学网页1.html"  class="dropdown-item ">数据</a>
+                       
+                      </li>
+                      <li class="nav-item">
+                        <a href="./pricing.html" class="dropdown-item">用户教程</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="./pricing.html" class="dropdown-item">常见问题</a>
+                      </li>
+                    </ul>
+                      
+                      <div class="dropdown-menu dropdown-lg">
+                    </li>
+                        </li>
+                  </ul>
+                    </li>
+                  </ul>
+                  <!-- /.navbar-nav -->
+                  <div class="offcanvas-footer d-lg-none">
+                    
+                      <nav class="nav social social-white mt-4">
+                        <a href="#"><i class="uil uil-twitter">
+                          </i></a>
+                        <a href="#"><i class="uil uil-facebook-f">
+                          </i></a>
+                        <a href="#"><i class="uil uil-dribbble">
+                          </i></a>
+                        <a href="#"><i class="uil uil-instagram">
+                          </i></a>
+                        <a href="#"><i class="uil uil-youtube">
+                          </i></a>
+                      </nav>
+                      <!-- /.social -->
+                  </div>
+                </div>
+                  <!-- /.offcanvas-footer -->
+              </div>
+                <!-- /.offcanvas-body -->
+        </div>
+              <!-- /.navbar-collapse -->
+              
+              <!-- /.navbar-other -->
+  </div>
+            <!-- /.container -->
+          
+          
+        <section data-image-src="../img/背景主页图片.jpg" class="wrapper" style="background-image: url('../img/背景主页图片.jpg'); 
+        background-size: cover; background-position: center; background-repeat: no-repeat;">
+          <div class="container pt-17 pb-12 pt-md-19 pb-md-16 text-center">
+            <div class="row">
+              <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                <div class="post-header">
+                  <div class="post-category text-line text-white">
+                    <a href="#" rel="category" class="text-reset">浏览信息</a>
+                  </div>
+                  <!-- /.post-category -->
+                  <h1 class="display-1 mb-3 text-white">欢迎来到七鳃鳗数据整理平台
+                  </h1>
+                  <p class="lead px-md-12 px-lg-12 px-xl-15 px-xxl-18">七鳃鳗的数据
+                  </p>
+                </div>
+                <!-- /.post-header -->
+              </div>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container -->
+        </section>
+        <!-- /section -->
+        
+          
+    </div>
+    
+    <h2>基因搜索</h2>
+
+    <!-- 搜索条件输入区域 -->
+    <div class="search-container" id="search-container">
+        <div>
+            <label for="region">按地区</label>
+            <input type="text" id="region" class="search-box" placeholder="请输入染色体/支架/重叠群">
+            <span class="example" onclick="showExample('region')">例如: CAPTEscaffold_1</span>
+            <button class="reset-button" onclick="resetInput('region')">重置</button>
+        </div>
+        <div>
+            <label for="gene">按基因</label>
+            <input type="text" id="gene" class="search-box" placeholder="请输入基因ID">
+            <span class="example" onclick="showExample('gene')">例如: gene: CapteG100120</span>
+            <button class="reset-button" onclick="resetInput('gene')">重置</button>
+        </div>
+        <button onclick="search()">搜索</button>
+    </div>
+
+    <!-- 搜索结果展示区域 -->
+    <div class="result-container" id="result-container">
+        <h2>基因搜索结果</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>基因 ID</th>
+                    <th>基因名称</th>
+                    <th>基因大小</th>
+                    <th>链</th>
+                    <th>染色体/支架/重叠群</th>
+                    <th>开始</th>
+                    <th>结束</th>
+                </tr>
+            </thead>
+            <tbody id="search-results">
+                <!-- 搜索结果将显示在这里 -->
+            </tbody>
+        </table>
+        <div class="pagination">
+            <select id="itemsPerPage" onchange="changeItemsPerPage()">
+                <option value="10">每页10条</option>
+                <option value="20">每页20条</option>
+                <option value="40">每页40条</option>
+            </select>
+            <button onclick="prevPage()">上一页</button>
+            <span id="currentPageInfo"></span>
+            <button onclick="nextPage()">下一页</button>
+        </div>
+    </div>
+
+    <script>
+        // 定义当前页码和每页显示条数
+        let currentPage = 1;
+        let itemsPerPage = 10;
+        // 示例数据数组，您可以根据需要添加更多数据
+        let data = [
+            { id: 'CapteG226733', name: '第3圈', size: 2927, strand: '+', scaffold: 'CAPTEscaffold_1', start: 94280, end: 97206 },
+            { id: 'CapteG210269', name: '-', size: 6589, strand: '-', scaffold: 'CAPTEscaffold_1', start: 110524, end: 117112 },
+            { id: 'CapteG226734', name: '-', size: 4296, strand: '-', scaffold: 'CAPTEscaffold_1', start: 135027, end: 139322 },
+            { id: 'CapteG33500', name: '-', size: 3012, strand: '+', scaffold: 'CAPTEscaffold_1', start: 144070, end: 147081 },
+            { id: 'CapteG210273', name: 'GALR2', size: 1170, strand: '+', scaffold: 'CAPTEscaffold_1', start: 194512, end: 195681 },
+            { id: 'CapteG5305', name: 'SLC40A1', size: 2993, strand: '-', scaffold: 'CAPTEscaffold_1', start: 196109, end: 199101 },
+            { id: 'CapteG210275', name: '-', size: 5257, strand: '-', scaffold: 'CAPTEscaffold_1', start: 201925, end: 207181 },
+            { id: 'CapteG226736', name: 'Abca1', size: 13799, strand: '+', scaffold: 'CAPTEscaffold_1', start: 216565, end: 230363 },
+            { id: 'CapteG210277', name: '-', size: 1330, strand: '-', scaffold: 'CAPTEscaffold_1', start: 230444, end: 231773 },
+            { id: 'CapteG210278', name: '-', size: 1150, strand: '-', scaffold: 'CAPTEscaffold_1', start: 237483, end: 238632 }
+        ];
+
+        // 显示示例输入
+        function showExample(type) {
+            if (type === 'region') {
+                document.getElementById('region').value = 'CAPTEscaffold_1';
+            } else if (type === 'gene') {
+                document.getElementById('gene').value = 'gene: CapteG100120';
+            }
+        }
+
+        // 重置输入框
+        function resetInput(inputId) {
+            document.getElementById(inputId).value = '';
+        }
+
+        // 执行搜索
+        function search() {
+            const region = document.getElementById('region').value.trim();
+            const gene = document.getElementById('gene').value.trim();
+            // 过滤数据，根据地区和基因ID
+            const filteredData = data.filter(item => 
+                (region === '' || item.scaffold.includes(region)) &&
+                (gene === '' || item.id.includes(gene))
+             );
+            currentPage = 1;
+            // 渲染搜索结果
+            renderResults(filteredData);
+            // 隐藏搜索条件输入区域，显示搜索结果区域
+            document.getElementById('search-container').style.display = 'none';
+            document.getElementById('result-container').style.display = 'block';
+        }
+
+        // 渲染搜索结果
+        function renderResults(filteredData) {
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const paginatedData = filteredData.slice(start, end);
+            const resultsDiv = document.getElementById('search-results');
+            resultsDiv.innerHTML = ''; // 清空之前的搜索结果
+            paginatedData.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.id}</td>
+                    <td>${item.name}</td>
+                    <td>${item.size}</td>
+                    <td>${item.strand}</td>
+                    <td>${item.scaffold}</td>
+                    <td>${item.start}</td>
+                    <td>${item.end}</td>
+                `;
+                resultsDiv.appendChild(row);
+            });
+            renderPagination(filteredData);
+        }
+
+        // 更改每页显示条数
+        function changeItemsPerPage() {
+            itemsPerPage = parseInt(document.getElementById('itemsPerPage').value);
+            currentPage = 1;
+            renderResults(data);
+        }
+
+        // 上一页
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                renderResults(data);
+            }
+        }
+
+        // 下一页
+        function nextPage() {
+            const pageCount = Math.ceil(data.length / itemsPerPage);
+             if (currentPage < pageCount) {
+                 currentPage++;
+                 renderResults(data);
+             }
+        }
+
+        // 渲染分页信息
+        function renderPagination(filteredData) {
+            const pageCount = Math.ceil(filteredData.length / itemsPerPage);
+            const paginationDiv = document.getElementById('currentPageInfo');
+            paginationDiv.textContent = `第 ${currentPage} 页 / 共 ${pageCount} 页`;
+        }
+    </script>
+
+
+        
+
+    
+    
+      <!-- 网站下方小模块/.content-wrapper -->
+      
+      <footer class="bg-dark text-inverse">
+        <div class="container py-13 py-md-15">
+          <div class="row gy-6 gy-lg-0">
+            <div class="col-md-4 col-lg-3">
+              <div class="widget">
+               
+                <p class="mb-4">2025  
+                  <br class="d-none d-lg-block"/>is coming!
+                </p>
+                <nav class="nav social social-white">
+                  <a href="#"></a>
+                  <a href="#"></a>
+                  <a href="#"></a>
+                  <a href="#"></a>
+                  <a href="#"></a>
+                </nav>
+                <!-- /.social -->
+              </div>
+              <!-- /.widget -->
+            </div>
+            <!-- /column -->
+            <div class="col-md-4 col-lg-3">
+              <div class="widget">
+                <h4 class="widget-title text-white mb-3">联系我们
+                </h4>
+                <address class="pe-xl-15 pe-xxl-17">中国·辽宁
+                </address>2893625003@qq.com
+              </div>
+              <!-- /.widget -->
+            </div>
+            <!-- /column -->
+            <div class="col-md-4 col-lg-3">
+              <div class="widget">
+                <h4 class="widget-title text-white mb-3">了解更多
+                </h4>
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#">关于我们</a>
+                  </li>
+                 
+                  
+                  <li>
+                    <a href="#">隐私条款</a>
+                  </li>
+                  
+                </ul>
+              </div>
+              <!-- /.widget -->
+            </div>
+            <!-- /column -->
+            <div class="col-md-12 col-lg-3">
+              <div class="widget">
+                <h4 class="widget-title text-white mb-3">电子邮件
+                </h4>
+                <p class="mb-5">您可以发送邮件到：
+                  <a href="mail:2893625003@qq.com" class="hover">2893625003@qq.com</a>联系我们！
+                </p>
+                <!-- /.newsletter-wrapper -->
+              </div>
+              <!-- /.widget -->
+            </div>
+            <!-- /column -->
+          </div>
+          <!--/.row -->
+        </div>
+        <!-- /.container -->
+      </footer>   
+      
+  <script src="../js/bbb.js"></script> 
+  <script src="../js/plugins.js"></script>
+  
+   
+  </body>
