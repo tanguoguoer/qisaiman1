@@ -9,7 +9,81 @@
     </title><head>
       <link rel="stylesheet" href="../css/111.css" />  
       <style>
-      body {
+          body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .panel {
+            background: #f9f9f9;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 8px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .plot-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .plot-panel {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            background: white;
+        }
+        .plot-panel h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #eee;
+        }
+        .error {
+            color: #e74c3c;
+            padding: 10px;
+            background: #fdecea;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .current-dataset {
+            font-weight: bold;
+            color: #3498db;
+        }
+      body{
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
         margin: 0;
@@ -935,6 +1009,68 @@
         }
     });
 </script>
+<div class="container">
+  <div class="header">
+      <h1>Single-Cell Gene Expression Explorer</h1>
+      {% if current_dataset %}
+          <p>Current dataset: <span class="current-dataset">{{ current_dataset }}</span></p>
+      {% endif %}
+  </div>
+
+  <div class="panel">
+      <h2>Dataset Selection</h2>
+      <form method="POST">
+          <div class="form-group">
+              <input type="text" name="dataset" placeholder="Enter dataset name (e.g. sb_adult)" required>
+              <button type="submit">Load Dataset</button>
+          </div>
+      </form>
+  </div>
+
+  <div class="panel">
+      <h2>Gene Analysis</h2>
+      <form method="POST">
+          <div class="form-group">
+              <input type="text" name="gene" placeholder="Enter gene name (e.g. MSTRG.28259)" required>
+              <button type="submit">Analyze Gene</button>
+          </div>
+      </form>
+  </div>
+
+  {% if error %}
+      <div class="error">{{ error }}</div>
+  {% endif %}
+
+  <div class="plot-container">
+      <div class="plot-panel">
+          <h3>Dataset Overview</h3>
+          {% if dataset_umap %}
+              <img src="{{ dataset_umap }}" alt="Dataset UMAP">
+          {% else %}
+              <p>No dataset loaded</p>
+          {% endif %}
+      </div>
+
+      <div class="plot-panel">
+          <h3>Gene Expression Pattern</h3>
+          {% if gene_umap %}
+              <img src="{{ gene_umap }}" alt="Gene UMAP">
+          {% else %}
+              <p>Gene UMAP will appear here</p>
+          {% endif %}
+      </div>
+
+      <div class="plot-panel">
+          <h3>Expression Distribution</h3>
+          {% if violin_plot %}
+              <img src="{{ violin_plot }}" alt="Violin Plot">
+          {% else %}
+              <p>Violin plot will appear here</p>
+          {% endif %}
+      </div>
+  </div>
+</div>
+
     <!-- 网站下方小模块/.content-wrapper -->
     
     <footer class="bg-dark text-inverse">
